@@ -77,13 +77,15 @@ export default {
     getNextDoggos(selectedBreed) {
       window.onscroll = () => {
         let bottomOfWindow =
-          document.documentElement.scrollTop + window.innerHeight ===
-          document.documentElement.offsetHeight;
+          document.documentElement.scrollTop + window.innerHeight >=
+          document.documentElement.offsetHeight - 2;
         if (bottomOfWindow) {
           if (this.state === "search") {
             this.fetchDoggos(selectedBreed);
+            console.log("test");
           } else if (this.state === "random") {
             this.fetchRandomDoggos();
+            console.log("test");
           }
         }
       };
