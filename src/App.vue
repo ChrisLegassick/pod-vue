@@ -82,10 +82,8 @@ export default {
         if (bottomOfWindow) {
           if (this.state === "search") {
             this.fetchDoggos(selectedBreed);
-            console.log("test");
           } else if (this.state === "random") {
             this.fetchRandomDoggos();
-            console.log("test");
           }
         }
       };
